@@ -1,12 +1,13 @@
 /*
  * Feature Model to Excel-based Configurator Support Tool
  *
- * Copyright (c) 2023 AIG team, Institute for Software Technology, Graz University of Technology, Austria
+ * Copyright (c) 2020-2023 AIG team, Institute for Software Technology, Graz University of Technology, Austria
  *
  * Contact: http://ase.ist.tugraz.at/ASE/
  */
 
 package at.tugraz.ist.ase.fm2exconf.parser.antlr4;
+
 import at.tugraz.ist.ase.fm2exconf.core.FeatureModelException;
 import at.tugraz.ist.ase.fm2exconf.parser.ParserException;
 import org.antlr.v4.runtime.tree.ParseTreeListener;
