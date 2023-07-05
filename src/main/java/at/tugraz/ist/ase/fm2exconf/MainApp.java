@@ -9,13 +9,11 @@
 package at.tugraz.ist.ase.fm2exconf;
 
 import at.tugraz.ist.ase.fm2exconf.ui.MainWindowController;
-import at.tugraz.ist.ase.fm2exconf.ui.RootLayoutController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -33,7 +31,6 @@ public class MainApp extends Application {
     private String defaultTitle = "FM2Conf";
 
     private Stage primaryStage;
-    private BorderPane rootLayout;
     private AnchorPane mainWindow;
 
     private MainWindowController mainWindowController;
@@ -60,53 +57,7 @@ public class MainApp extends Application {
         // Set the application icon.
 //        this.primaryStage.getIcons().add(new Image("/images/address_book_32.png"));
 
-        // TODO: rootlayout
-//        initRootLayout();
-
         showMainWindow();
-    }
-
-    /**
-     * Initializes the root layout and tries to load the last opened
-     * person file.
-     */
-    public void initRootLayout() {
-        try {
-            // Load root layout from fxml file.
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(MainApp.class
-                    .getResource("/RootLayout.fxml"));
-            rootLayout = (BorderPane) loader.load();
-
-//            MenuToolkit tk = MenuToolkit.toolkit(Locale.getDefault());
-//            tk.setApplicationMenu(tk.createDefaultApplicationMenu("FM2ExConf"));
-//
-//            // check Mac OS X
-//            final String os = System.getProperty("os.name");
-//            if (os != null && os.startsWith("Mac"))
-//                ((MenuBar)rootLayout.getTop()).useSystemMenuBarProperty().set(true);
-
-            // Show the scene containing the root layout.
-            Scene scene = new Scene(rootLayout);
-            primaryStage.setScene(scene);
-            primaryStage.setMinHeight(550);
-            primaryStage.setMinWidth(650);
-            primaryStage.setResizable(false);
-
-            // Give the controller access to the main app.
-            RootLayoutController controller = loader.getController();
-            controller.setMainApp(this);
-
-            primaryStage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        // Try to load last opened person file.
-//        File file = getPersonFilePath();
-//        if (file != null) {
-//            loadPersonDataFromFile(file);
-//        }
     }
 
     /**
@@ -122,9 +73,6 @@ public class MainApp extends Application {
             // Show the scene containing the root layout.
             Scene scene = new Scene(mainWindow);
             primaryStage.setScene(scene);
-
-            // Set the main window into the center of root layout.
-//            rootLayout.setCenter(mainWindow);
 
             // Give the controller access to the main app.
             mainWindowController = loader.getController();
