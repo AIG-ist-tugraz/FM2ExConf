@@ -13,7 +13,7 @@ FM2ExConf has two key functionalities:
 
 The tool is a standalone Java application.
 To use the tool,
-please _download the latest executable JAR file [fm2exconf-1.0.3.jar]()_ and _install the latest version of Java_
+please _download the latest executable JAR file [fm2exconf-1.0.3.jar](https://github.com/AIG-ist-tugraz/FM2ExConf/releases/tag/v1.0.3)_ and _install the latest version of Java_
 (Java version 8 update 270 or later).
 
 #### Install Java
