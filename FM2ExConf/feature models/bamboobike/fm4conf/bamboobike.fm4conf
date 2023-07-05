@@ -1,0 +1,25 @@
+FM4Conf-v1.0
+MODEL:
+Bamboo Bike
+FEATURES:
+Bamboo Bike,
+Frame,
+Brake,
+Engine,
+Drop Handlebar,
+Female,
+Male,
+Step-through,
+Front,
+Rear,
+Back-pedal
+RELATIONSHIPS:
+mandatory(Bamboo Bike, Frame),
+mandatory(Bamboo Bike, Brake),
+optional(Engine, Bamboo Bike),
+optional(Drop Handlebar, Bamboo Bike),
+alternative(Frame, Female, Male, Step-through),
+or(Brake, Front, Rear, Back-pedal)
+CONSTRAINTS:
+excludes(Engine, Back-pedal),
+requires(Drop Handlebar, Male)

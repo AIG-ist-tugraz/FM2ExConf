@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xmi:XMI xmi:version="2.0" 
+  xmlns:xmi="http://www.omg.org/XMI" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xmlns:com.prostep.vcontrol.model.common="http://www.prostep.com/vcontrol/model/common.ecore" 
+  xmlns:com.prostep.vcontrol.model.feature="http://www.prostep.com/vcontrol/model/feature.ecore" 
+  xmlns:com.prostep.vcontrol.model.terms="http://www.prostep.com/vcontrol/model/terms.ecore">
+  <com.prostep.vcontrol.model.common:ImpProject id="ckb8jyc8i00033g5omwkuc6y2" name="Smartwatch">
+    <models xsi:type="com.prostep.vcontrol.model.feature:FeatureModel" id="ckb8jyc8i00033g5omwkuc6y2" name="Smartwatch">
+      <rootFeature xsi:type="com.prostep.vcontrol.model.feature:Feature" id="ckb8jyc8f00023g5o3lq9ay88" name="Smartwatch" optional="false">
+        <children xsi:type="com.prostep.vcontrol.model.feature:FeatureGroup" id="ckb8jznqh00043g5oxyhgaeqa" name="Connector" optional="false" max="4">
+          <children xsi:type="com.prostep.vcontrol.model.feature:FeatureGroup" id="ckb8k0lyy00063g5o9leksiaz" name="GPS" optional="false"/>
+          <children xsi:type="com.prostep.vcontrol.model.feature:FeatureGroup" id="ckb8k12rx00083g5opp9btky9" name="Cellular" optional="false"/>
+          <children xsi:type="com.prostep.vcontrol.model.feature:FeatureGroup" id="ckb8k2hjf000f3g5oiuws2a0c" name="Wifi" optional="false" max="0"/>
+          <children xsi:type="com.prostep.vcontrol.model.feature:FeatureGroup" id="ckb8k2pfi000h3g5o0gl6t95y" name="Bluetooth" optional="false" max="0"/></children>
+        <children xsi:type="com.prostep.vcontrol.model.feature:FeatureGroup" id="ckb8k2zdl000j3g5oud5px1f6" name="Screen" optional="false">
+          <children xsi:type="com.prostep.vcontrol.model.feature:FeatureGroup" id="ckb8k37sq000l3g5ojp5ayvdf" name="Analog" optional="false"/>
+          <children xsi:type="com.prostep.vcontrol.model.feature:FeatureGroup" id="ckb8k3vwv000q3g5ou76zkc7z" name="High Resolution" optional="false"/>
+          <children xsi:type="com.prostep.vcontrol.model.feature:FeatureGroup" id="ckb8k45h7000s3g5o9kxv95an" name="E-ink" optional="false"/></children>
+        <children xsi:type="com.prostep.vcontrol.model.feature:Feature" id="ckb8k4hq5000v3g5okqw93fkd" name="Camera"/>
+        <children xsi:type="com.prostep.vcontrol.model.feature:Feature" id="ckb8k4nix000x3g5o9vmax05m" name="Compass"/>
+      </rootFeature>
+      <constraints id="ckb8k5amj000z3g5ozfh4aq0u">
+        <rootTerm xsi:type="com.prostep.vcontrol.model.terms:ImpliesTerm">
+          <leftOperand xsi:type="com.prostep.vcontrol.model.terms:AtomicTerm" element="ckb8k4hq5000v3g5okqw93fkd"/>
+          <rightOperand xsi:type="com.prostep.vcontrol.model.terms:AtomicTerm" element="ckb8k3vwv000q3g5ou76zkc7z"/>
+        </rootTerm>
+      </constraints>
+      <constraints id="ckb8k5jgd00103g5okq4saw4x">
+        <rootTerm xsi:type="com.prostep.vcontrol.model.terms:ExcludesTerm">
+          <leftOperand xsi:type="com.prostep.vcontrol.model.terms:AtomicTerm" element="ckb8k37sq000l3g5ojp5ayvdf"/>
+          <rightOperand xsi:type="com.prostep.vcontrol.model.terms:AtomicTerm" element="ckb8k12rx00083g5opp9btky9"/>
+        </rootTerm>
+      </constraints>
+    </models>
+  </com.prostep.vcontrol.model.common:ImpProject>
+</xmi:XMI>

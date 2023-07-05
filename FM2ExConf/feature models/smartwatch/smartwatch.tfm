@@ -1,0 +1,23 @@
+tfm-1.0
+features:
+Smartwatch
+Screen
+Connector
+Camera
+Compass
+Analog
+High Resolution
+E-ink
+GPS
+Wifi
+Bluetooth
+relationships:
+mandatory(Smartwatch,Screen)
+mandatory(Smartwatch,Screen)
+optional(Camera,Smartwatch)
+optional(Compass,Smartwatch)
+alternative(Screen,Analog,High Resolution,E-ink)
+or(Connector,GPS,Cellular,Wifi,Bluetooth)
+constraints:
+requires(Camera,High Resolution)
+excludes(Cellular,Analog)

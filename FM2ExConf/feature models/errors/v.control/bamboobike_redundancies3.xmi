@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xmi:XMI xmi:version="2.0" 
+  xmlns:xmi="http://www.omg.org/XMI" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xmlns:com.prostep.vcontrol.model.common="http://www.prostep.com/vcontrol/model/common.ecore" 
+  xmlns:com.prostep.vcontrol.model.feature="http://www.prostep.com/vcontrol/model/feature.ecore" 
+  xmlns:com.prostep.vcontrol.model.terms="http://www.prostep.com/vcontrol/model/terms.ecore">
+  <com.prostep.vcontrol.model.common:ImpProject id="ckci4qpr0003d3e58exco3zpy" name="bamboobike_redundancies3">
+    <models xsi:type="com.prostep.vcontrol.model.feature:FeatureModel" id="ckci4qpr0003d3e58exco3zpy" name="bamboobike_redundancies3">
+      <rootFeature xsi:type="com.prostep.vcontrol.model.feature:Feature" id="ckci3qjil00003e58h8wmfzwo" name="Bamboo Bike" optional="false">
+        <children xsi:type="com.prostep.vcontrol.model.feature:FeatureGroup" id="ckci3sy2w00023e583cq7wwwl" name="Frame" optional="false">
+          <children xsi:type="com.prostep.vcontrol.model.feature:Feature" id="ckci3u8t1000a3e58x0er82zw" name="Female"/>
+          <children xsi:type="com.prostep.vcontrol.model.feature:Feature" id="ckci3ujmd000c3e583h5o3o4e" name="Male"/>
+          <children xsi:type="com.prostep.vcontrol.model.feature:Feature" id="ckci3uyit000e3e58w7uu88ij" name="Step-through"/></children>
+        <children xsi:type="com.prostep.vcontrol.model.feature:FeatureGroup" id="ckci3t9ed00043e58z5m1lwum" name="Brake" optional="false" max="3">
+          <children xsi:type="com.prostep.vcontrol.model.feature:Feature" id="ckci3w049000l3e58wp35pb7r" name="Front"/>
+          <children xsi:type="com.prostep.vcontrol.model.feature:Feature" id="ckci3w6qr000n3e58b2xz21kc" name="Rear"/>
+          <children xsi:type="com.prostep.vcontrol.model.feature:Feature" id="ckci3wg4y000p3e58n3tfzdar" name="Back-pedal"/></children>
+        <children xsi:type="com.prostep.vcontrol.model.feature:Feature" id="ckci3tibr00063e58kb3ine26" name="Engine"/>
+        <children xsi:type="com.prostep.vcontrol.model.feature:Feature" id="ckci3trnl00083e583617r23q" name="Drop Handlebar"/>
+      </rootFeature>
+      <constraints id="ckci464cd002s3e58i6ck9n52">
+        <rootTerm xsi:type="com.prostep.vcontrol.model.terms:ExcludesTerm">
+          <leftOperand xsi:type="com.prostep.vcontrol.model.terms:AtomicTerm" element="ckci3tibr00063e58kb3ine26"/>
+          <rightOperand xsi:type="com.prostep.vcontrol.model.terms:AtomicTerm" element="ckci3wg4y000p3e58n3tfzdar"/>
+        </rootTerm>
+      </constraints>
+      <constraints id="ckci46cew002t3e58m256aqx9">
+        <rootTerm xsi:type="com.prostep.vcontrol.model.terms:ImpliesTerm">
+          <leftOperand xsi:type="com.prostep.vcontrol.model.terms:AtomicTerm" element="ckci3trnl00083e583617r23q"/>
+          <rightOperand xsi:type="com.prostep.vcontrol.model.terms:AtomicTerm" element="ckci3ujmd000c3e583h5o3o4e"/>
+        </rootTerm>
+      </constraints>
+      <constraints id="ckci4ratn003e3e589nvrtu7c">
+        <rootTerm xsi:type="com.prostep.vcontrol.model.terms:ExcludesTerm">
+          <leftOperand xsi:type="com.prostep.vcontrol.model.terms:AtomicTerm" element="ckci3u8t1000a3e58x0er82zw"/>
+          <rightOperand xsi:type="com.prostep.vcontrol.model.terms:AtomicTerm" element="ckci3ujmd000c3e583h5o3o4e"/>
+        </rootTerm>
+      </constraints>
+      <constraints id="ckci4rie5003f3e58pqo3c6he">
+        <rootTerm xsi:type="com.prostep.vcontrol.model.terms:ImpliesTerm">
+          <leftOperand xsi:type="com.prostep.vcontrol.model.terms:AtomicTerm" element="ckci3tibr00063e58kb3ine26"/>
+          <rightOperand xsi:type="com.prostep.vcontrol.model.terms:AtomicTerm" element="ckci3sy2w00023e583cq7wwwl"/>
+        </rootTerm>
+      </constraints>
+      <constraints id="ckci4rpkw003g3e583ky96mr2">
+        <rootTerm xsi:type="com.prostep.vcontrol.model.terms:ImpliesTerm">
+          <leftOperand xsi:type="com.prostep.vcontrol.model.terms:AtomicTerm" element="ckci3trnl00083e583617r23q"/>
+          <rightOperand xsi:type="com.prostep.vcontrol.model.terms:AtomicTerm" element="ckci3qjil00003e58h8wmfzwo"/>
+        </rootTerm>
+      </constraints>
+      <constraints id="ckci4rwau003h3e58227zfv2a">
+        <rootTerm xsi:type="com.prostep.vcontrol.model.terms:ImpliesTerm">
+          <leftOperand xsi:type="com.prostep.vcontrol.model.terms:AtomicTerm" element="ckci3w6qr000n3e58b2xz21kc"/>
+          <rightOperand xsi:type="com.prostep.vcontrol.model.terms:AtomicTerm" element="ckci3t9ed00043e58z5m1lwum"/>
+        </rootTerm>
+      </constraints>
+      <constraints id="ckci4s2ke003i3e58abs6iaej">
+        <rootTerm xsi:type="com.prostep.vcontrol.model.terms:ImpliesTerm">
+          <leftOperand xsi:type="com.prostep.vcontrol.model.terms:AtomicTerm" element="ckci3w6qr000n3e58b2xz21kc"/>
+          <rightOperand xsi:type="com.prostep.vcontrol.model.terms:AtomicTerm" element="ckci3qjil00003e58h8wmfzwo"/>
+        </rootTerm>
+      </constraints>
+    </models>
+  </com.prostep.vcontrol.model.common:ImpProject>
+</xmi:XMI>

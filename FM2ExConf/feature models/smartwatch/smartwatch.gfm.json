@@ -1,0 +1,169 @@
+{
+  "id": "ckb8jyc8i00033g5omwkuc6y2",
+  "name": "Smartwatch",
+  "timestamp": "2020-06-09T23:40:27.277Z",
+  "features": {
+    "ckb8jyc8f00023g5o3lq9ay88": {
+      "name": "Smartwatch",
+      "optional": false,
+      "type": "FEATURE",
+      "note": ""
+    },
+    "ckb8jznqh00043g5oxyhgaeqa": {
+      "name": "Connector",
+      "optional": false,
+      "type": "OR",
+      "note": ""
+    },
+    "ckb8k2zdl000j3g5oud5px1f6": {
+      "name": "Screen",
+      "optional": false,
+      "type": "XOR",
+      "note": ""
+    },
+    "ckb8k4hq5000v3g5okqw93fkd": {
+      "name": "Camera",
+      "optional": true,
+      "type": "FEATURE",
+      "note": ""
+    },
+    "ckb8k4nix000x3g5o9vmax05m": {
+      "name": "Compass",
+      "optional": true,
+      "type": "FEATURE",
+      "note": ""
+    },
+    "ckb8k0lyy00063g5o9leksiaz": {
+      "name": "GPS",
+      "optional": false,
+      "type": "XOR",
+      "note": ""
+    },
+    "ckb8k12rx00083g5opp9btky9": {
+      "name": "Cellular",
+      "optional": false,
+      "type": "XOR",
+      "note": ""
+    },
+    "ckb8k2hjf000f3g5oiuws2a0c": {
+      "name": "Wifi",
+      "optional": false,
+      "type": "OR",
+      "note": ""
+    },
+    "ckb8k2pfi000h3g5o0gl6t95y": {
+      "name": "Bluetooth",
+      "optional": false,
+      "type": "OR",
+      "note": ""
+    },
+    "ckb8k37sq000l3g5ojp5ayvdf": {
+      "name": "Analog",
+      "optional": false,
+      "type": "XOR",
+      "note": ""
+    },
+    "ckb8k3vwv000q3g5ou76zkc7z": {
+      "name": "High Resolution",
+      "optional": false,
+      "type": "XOR",
+      "note": ""
+    },
+    "ckb8k45h7000s3g5o9kxv95an": {
+      "name": "E-ink",
+      "optional": false,
+      "type": "XOR",
+      "note": ""
+    }
+  },
+  "tree": {
+    "id": "ckb8jyc8f00023g5o3lq9ay88",
+    "children": [
+      {
+        "id": "ckb8jznqh00043g5oxyhgaeqa",
+        "children": [
+          {
+            "id": "ckb8k0lyy00063g5o9leksiaz"
+          },
+          {
+            "id": "ckb8k12rx00083g5opp9btky9"
+          },
+          {
+            "id": "ckb8k2hjf000f3g5oiuws2a0c"
+          },
+          {
+            "id": "ckb8k2pfi000h3g5o0gl6t95y"
+          }
+        ]
+      },
+      {
+        "id": "ckb8k2zdl000j3g5oud5px1f6",
+        "children": [
+          {
+            "id": "ckb8k37sq000l3g5ojp5ayvdf"
+          },
+          {
+            "id": "ckb8k3vwv000q3g5ou76zkc7z"
+          },
+          {
+            "id": "ckb8k45h7000s3g5o9kxv95an"
+          }
+        ]
+      },
+      {
+        "id": "ckb8k4hq5000v3g5okqw93fkd"
+      },
+      {
+        "id": "ckb8k4nix000x3g5o9vmax05m"
+      }
+    ]
+  },
+  "constraints": {
+    "ckb8k5amj000z3g5ozfh4aq0u": {
+      "type": "ImpliesTerm",
+      "operands": [
+        {
+          "type": "FeatureTerm",
+          "operands": [
+            "ckb8k4hq5000v3g5okqw93fkd"
+          ]
+        },
+        {
+          "type": "FeatureTerm",
+          "operands": [
+            "ckb8k3vwv000q3g5ou76zkc7z"
+          ]
+        }
+      ]
+    },
+    "ckb8k5jgd00103g5okq4saw4x": {
+      "type": "ExcludesTerm",
+      "operands": [
+        {
+          "type": "FeatureTerm",
+          "operands": [
+            "ckb8k37sq000l3g5ojp5ayvdf"
+          ]
+        },
+        {
+          "type": "FeatureTerm",
+          "operands": [
+            "ckb8k12rx00083g5opp9btky9"
+          ]
+        }
+      ]
+    }
+  },
+  "conjectures": {},
+  "checks": {
+    "CONSISTENCY": null,
+    "CONJECTURES": null,
+    "COMMONFEATURES": null,
+    "UNIQUEFEATURES": null,
+    "DEADFEATURES": null,
+    "ATOMICSETS": null,
+    "POSSIBLECONFIGURATIONS": null,
+    "COMMONALITIES": null
+  },
+  "configurations": {}
+}

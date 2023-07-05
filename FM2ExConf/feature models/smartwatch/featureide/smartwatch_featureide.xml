@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+  ~ Feature Model to Excel-based Configurator Support Tool
+  ~
+  ~ Copyright (c) 2023 AIG team, Institute for Software Technology, Graz University of Technology, Austria
+  ~
+  ~ Contact: http://ase.ist.tugraz.at/ASE/
+  -->
+
+<featureModel>
+	<properties>
+		<graphics key="showhiddenfeatures" value="true"/>
+		<graphics key="legendautolayout" value="true"/>
+		<graphics key="showshortnames" value="false"/>
+		<graphics key="layout" value="horizontal"/>
+		<graphics key="showcollapsedconstraints" value="true"/>
+		<graphics key="legendhidden" value="false"/>
+		<graphics key="layoutalgorithm" value="1"/>
+	</properties>
+	<struct>
+		<and abstract="true" mandatory="true" name="Smartwatch">
+			<graphics key="collapsed" value="false"/>
+			<or mandatory="true" name="Connector">
+				<feature name="GPS"/>
+				<feature name="Cellular"/>
+				<feature name="Wifi"/>
+				<feature name="Bluetooth"/>
+			</or>
+			<alt mandatory="true" name="Screen">
+				<feature name="Analog"/>
+				<feature name="High Resolution"/>
+				<feature name="E-ink"/>
+			</alt>
+			<feature name="Camera"/>
+			<feature name="Compass"/>
+		</and>
+	</struct>
+	<constraints>
+		<rule>
+			<imp>
+				<var>Camera</var>
+				<var>High Resolution</var>
+			</imp>
+		</rule>
+		<rule>
+			<disj>
+				<not>
+					<var>Cellular</var>
+				</not>
+				<not>
+					<var>Analog</var>
+				</not>
+			</disj>
+		</rule>
+	</constraints>
+</featureModel>

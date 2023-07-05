@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+  ~ Feature Model to Excel-based Configurator Support Tool
+  ~
+  ~ Copyright (c) 2023 AIG team, Institute for Software Technology, Graz University of Technology, Austria
+  ~
+  ~ Contact: http://ase.ist.tugraz.at/ASE/
+  -->
+
+<featureModel>
+	<properties>
+		<graphics key="showhiddenfeatures" value="true"/>
+		<graphics key="legendautolayout" value="true"/>
+		<graphics key="showshortnames" value="false"/>
+		<graphics key="layout" value="horizontal"/>
+		<graphics key="showcollapsedconstraints" value="true"/>
+		<graphics key="legendhidden" value="false"/>
+		<graphics key="layoutalgorithm" value="1"/>
+	</properties>
+	<struct>
+		<and abstract="true" mandatory="true" name="Bamboo Bike">
+			<graphics key="collapsed" value="false"/>
+			<alt mandatory="true" name="Frame">
+				<feature name="Female"/>
+				<feature name="Male"/>
+				<feature name="Step-through"/>
+			</alt>
+			<or mandatory="true" name="Brake">
+				<feature name="Front"/>
+				<feature name="Rear"/>
+				<feature name="Back-pedal"/>
+			</or>
+			<feature name="Engine"/>
+			<feature name="Drop Handlebar"/>
+		</and>
+	</struct>
+	<constraints>
+		<rule>
+			<imp>
+				<var>Drop Handlebar</var>
+				<var>Male</var>
+			</imp>
+		</rule>
+		<rule>
+			<disj>
+				<not>
+					<var>Engine</var>
+				</not>
+				<not>
+					<var>Back-pedal</var>
+				</not>
+			</disj>
+		</rule>
+		<rule>
+			<disj>
+				<not>
+					<var>Female</var>
+				</not>
+				<not>
+					<var>Male</var>
+				</not>
+			</disj>
+		</rule>
+		<rule>
+			<imp>
+				<var>Drop Handlebar</var>
+				<var>Bamboo Bike</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Engine</var>
+				<var>Frame</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rear</var>
+				<var>Brake</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rear</var>
+				<var>Bamboo Bike</var>
+			</imp>
+		</rule>
+	</constraints>
+</featureModel>

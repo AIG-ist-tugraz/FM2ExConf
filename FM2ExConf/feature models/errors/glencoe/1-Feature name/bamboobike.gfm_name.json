@@ -1,0 +1,160 @@
+{
+  "id": "ckci3qjin00013e58hqzd63wk",
+  "name": "bamboobike",
+  "timestamp": "2020-07-11T20:47:46.652Z",
+  "features": {
+    "ckci3qjil00003e58h8wmfzwo": {
+      "name": "Bamboo Bike",
+      "optional": false,
+      "type": "FEATURE",
+      "note": ""
+    },
+    "ckci3sy2w00023e583cq7wwwl": {
+      "name": "Frame",
+      "optional": false,
+      "type": "XOR",
+      "note": ""
+    },
+    "ckci3t9ed00043e58z5m1lwum": {
+      "name": "Brake",
+      "optional": false,
+      "type": "OR",
+      "note": ""
+    },
+    "ckci3tibr00063e58kb3ine26": {
+      "name": "Engine",
+      "optional": true,
+      "type": "FEATURE",
+      "note": ""
+    },
+    "ckci3trnl00083e583617r23q": {
+      "name": "Drop Handlebar",
+      "optional": true,
+      "type": "FEATURE",
+      "note": ""
+    },
+    "ckci3u8t1000a3e58x0er82zw": {
+      "name": "Female",
+      "optional": true,
+      "type": "FEATURE",
+      "note": ""
+    },
+    "ckci3ujmd000c3e583h5o3o4e": {
+      "name": "Male",
+      "optional": true,
+      "type": "FEATURE",
+      "note": ""
+    },
+    "ckci3uyit000e3e58w7uu88ij": {
+      "name": "Step-through",
+      "optional": true,
+      "type": "FEATURE",
+      "note": ""
+    },
+    "ckci3w049000l3e58wp35pb7r": {
+      "name": "Front",
+      "optional": true,
+      "type": "FEATURE",
+      "note": ""
+    },
+    "ckci3w6qr000n3e58b2xz21kc": {
+      "name": "Rear",
+      "optional": true,
+      "type": "FEATURE",
+      "note": ""
+    },
+    "ckci3wg4y000p3e58n3tfzdar": {
+      "name": "Back-pedal",
+      "optional": true,
+      "type": "FEATURE",
+      "note": ""
+    }
+  },
+  "tree": {
+    "id": "ckci3qjil00003e58h8wmfzwo",
+    "children": [
+      {
+        "id": "ckci3sy2w00023e583cq7wwwl",
+        "children": [
+          {
+            "id": "ckci3u8t1000a3e58x0er82zw"
+          },
+          {
+            "id": "ckci3ujmd000c3e583h5o3o4e"
+          },
+          {
+            "id": "ckci3uyit000e3e58w7uu88ij"
+          }
+        ]
+      },
+      {
+        "id": "ckci3t9ed00043e58z5m1lwum",
+        "children": [
+          {
+            "id": "ckci3w049000l3e58wp35pb7r"
+          },
+          {
+            "id": "ckci3w6qr000n3e58b2xz21kc"
+          },
+          {
+            "id": "ckci3wg4y000p3e58n3tfzdar"
+          }
+        ]
+      },
+      {
+        "id": "ckci3tibr00063e58kb3ine26"
+      },
+      {
+        "id": "ckci3trnl00083e583617r23q"
+      }
+    ]
+  },
+  "constraints": {
+    "ckci464cd002s3e58i6ck9n52": {
+      "type": "ExcludesTerm",
+      "operands": [
+        {
+          "type": "FeatureTerm",
+          "operands": [
+            "ckci3tibr00063e58kb3ine26"
+          ]
+        },
+        {
+          "type": "FeatureTerm",
+          "operands": [
+            "ckci3wg4y000p3e58n3tfzdar"
+          ]
+        }
+      ]
+    },
+    "ckci46cew002t3e58m256aqx9": {
+      "type": "ImpliesTerm",
+      "operands": [
+        {
+          "type": "FeatureTerm",
+          "operands": [
+            "ckci3trnl00083e583617r23q"
+          ]
+        },
+        {
+          "type": "FeatureTerm",
+          "operands": [
+            "ckci3ujmd000c3e583h5o3o4e"
+          ]
+        }
+      ]
+    }
+  },
+  "conjectures": {},
+  "checks": {
+    "CONSISTENCY": null,
+    "CONJECTURES": null,
+    "COMMONFEATURES": null,
+    "UNIQUEFEATURES": null,
+    "DEADFEATURES": null,
+    "ATOMICSETS": null,
+    "POSSIBLECONFIGURATIONS": null,
+    "COMMONALITIES": null
+  },
+  "configurations": {}
+}
