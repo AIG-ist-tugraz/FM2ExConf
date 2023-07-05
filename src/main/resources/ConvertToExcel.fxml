@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<!--
+  ~ Feature Model to Excel-based Configurator Support Tool
+  ~
+  ~ Copyright (c) 2023 AIG team, Institute for Software Technology, Graz University of Technology, Austria
+  ~
+  ~ Contact: http://ase.ist.tugraz.at/ASE/
+  -->
+
+<AnchorPane prefHeight="388.0" prefWidth="525.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.tugraz.ist.ase.fm2exconf.ui.ConvertToExcelController">
+   <children>
+      <TabPane layoutX="15.0" layoutY="17.0" prefHeight="304.0" prefWidth="495.0" style="-fx-border-color: gray;" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="67.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+        <tabs>
+          <Tab text="The order of features">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <RadioButton fx:id="rbtnBF" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" selected="true" text="Breadth-first order" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="featuresOrder" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="rbtnDF" layoutX="14.0" layoutY="44.0" mnemonicParsing="false" text="Depth-first order" toggleGroup="$featuresOrder" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="44.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="The state of a feature">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <RadioButton fx:id="rbtnBinary" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" selected="true" text="Binary values (1/0)" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="stateOfFeature" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="rbtnLogic" layoutX="14.0" layoutY="44.0" mnemonicParsing="false" text="Logical values (TRUE/FALSE)" toggleGroup="$stateOfFeature" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="44.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Integrated services">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <CheckBox fx:id="chkPricing" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#handlePricingChanged" text="Pricing" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0" />
+                        <ScrollPane fx:id="holder" fitToHeight="true" fitToWidth="true" layoutX="14.0" layoutY="42.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="42.0">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
+                          </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Button defaultButton="true" layoutX="505.0" layoutY="346.0" mnemonicParsing="false" onAction="#handleConvert" prefHeight="40.0" prefWidth="81.0" text="Convert" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="14.0" />
+      <Button cancelButton="true" layoutX="414.0" layoutY="346.0" mnemonicParsing="false" onAction="#handleCancel" prefHeight="40.0" prefWidth="81.0" text="Cancel" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="105.0" />
+   </children>
+</AnchorPane>

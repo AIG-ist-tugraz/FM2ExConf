@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<!--
+  ~ Feature Model to Excel-based Configurator Support Tool
+  ~
+  ~ Copyright (c) 2023 AIG team, Institute for Software Technology, Graz University of Technology, Austria
+  ~
+  ~ Contact: http://ase.ist.tugraz.at/ASE/
+  -->
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="601.0" prefWidth="972.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.tugraz.ist.ase.fm2exconf.ui.MainWindowController">
+   <children>
+      <SplitPane dividerPositions="0.36797066014669927" minHeight="-Infinity" minWidth="-Infinity" prefHeight="559.0" prefWidth="956.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane fx:id="leftPane" minHeight="160.0" minWidth="100.0" prefHeight="160.0" prefWidth="100.0" SplitPane.resizableWithParent="false">
+               <children>
+                  <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleOpen" prefHeight="40.0" prefWidth="180.0" text="Choose a feature model..." AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Button>
+                  <GridPane layoutX="14.0" layoutY="64.0" prefHeight="27.0" prefWidth="271.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="64.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="155.0" minWidth="10.0" prefWidth="144.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="127.0" minWidth="10.0" prefWidth="119.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="Feature Model name:">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="fmName" text="Label" textFill="#0a27e4" GridPane.columnIndex="1">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font></Label>
+                     </children>
+                  </GridPane>
+                  <Accordion fx:id="accordion" layoutX="14.0" layoutY="91.0" prefHeight="439.0" prefWidth="340.0" AnchorPane.bottomAnchor="66.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="99.0">
+                    <panes>
+                      <TitledPane fx:id="titledPaneDetails" contentDisplay="TEXT_ONLY" text="Details">
+                        <content>
+                          <AnchorPane>
+                                 <children>
+                                    <ScrollPane layoutX="15.0" layoutY="18.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <content>
+<!--                                        <AnchorPane style="-fx-background-color: white;">-->
+<!--                                             <children>-->
+                                                <TextFlow fx:id="textAreaDetails" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <padding>
+                                                <Insets bottom="7.0" left="10.0" right="10.0" top="7.0" />
+                                             </padding></TextFlow>
+<!--                                             </children>-->
+<!--                                             <padding>-->
+<!--                                                <Insets bottom="7.0" left="10.0" right="10.0" top="7.0" />-->
+<!--                                             </padding>-->
+<!--                                          </AnchorPane>-->
+                                      </content>
+                                    </ScrollPane>
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                      </TitledPane>
+                      <TitledPane text="Metrics">
+                           <content>
+                              <AnchorPane>
+                                 <children>
+                                    <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="18.0" layoutY="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <content>
+                                        <AnchorPane>
+                                             <children>
+                                                <TextFlow fx:id="txtAreaMetrics" layoutY="-8.0" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-8.0">
+                                                   <padding>
+                                                      <Insets bottom="7.0" left="10.0" right="10.0" top="7.0" />
+                                                   </padding>
+                                                </TextFlow>
+                                             </children>
+                                          </AnchorPane>
+                                      </content>
+                                    </ScrollPane>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                      </TitledPane>
+                    </panes>
+                  </Accordion>
+                  <Button layoutX="14.0" layoutY="545.0" mnemonicParsing="false" onAction="#handleAbout" prefHeight="40.0" prefWidth="77.0" text="About..." AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="550.0" minWidth="500.0" prefHeight="595.0" prefWidth="605.0">
+               <children>
+                  <Button fx:id="buttonConvert" layoutX="215.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleConvert" prefHeight="40.0" prefWidth="173.0" text="Convert to Configurator..." AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Button>
+                  <Button fx:id="buttonRunAnalysis" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleRunAnalysis" prefHeight="40.0" prefWidth="104.0" text="Run Analysis" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Button>
+                  <AnchorPane layoutX="14.0" layoutY="62.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="62.0">
+                     <children>
+                        <ScrollPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <content>
+<!--                              <AnchorPane fx:id="paneResults" style="-fx-background-color: white;">-->
+<!--                                 <children>-->
+                                    <TextFlow fx:id="textAreaResults" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <padding>
+                                    <Insets bottom="7.0" left="10.0" right="10.0" top="7.0" />
+                                 </padding></TextFlow>
+<!--                                 </children>-->
+<!--                                 <padding>-->
+<!--                                    <Insets bottom="7.0" left="10.0" right="10.0" top="7.0" />-->
+<!--                                 </padding>-->
+<!--                              </AnchorPane>-->
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

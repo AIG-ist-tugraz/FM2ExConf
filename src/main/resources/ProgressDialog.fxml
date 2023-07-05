@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.layout.*?>
+<!--
+  ~ Feature Model to Excel-based Configurator Support Tool
+  ~
+  ~ Copyright (c) 2023 AIG team, Institute for Software Technology, Graz University of Technology, Austria
+  ~
+  ~ Contact: http://ase.ist.tugraz.at/ASE/
+  -->
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="115.0" prefWidth="280.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.tugraz.ist.ase.fm2exconf.ui.ProgressDialogController">
+   <children>
+      <ProgressBar fx:id="pgbCompletion" layoutX="14.0" layoutY="38.0" prefHeight="20.0" prefWidth="254.0" progress="0.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="38.0" />
+      <Label fx:id="lblStatus" layoutX="14.0" layoutY="14.0" text="Label" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0" />
+      <Button fx:id="btnCancel" layoutX="191.0" layoutY="75.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="75.0" text="Cancel" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="14.0" />
+   </children>
+</AnchorPane>
