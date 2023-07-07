@@ -16,24 +16,24 @@ import javafx.scene.layout.GridPane;
 
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
+import java.text.ParseException;
 import java.util.HashMap;
 import java.util.Map;
 
 public class PricePane extends GridPane {
 
-    private FeatureModel featureModel;
-    private Map<TextField, Feature> map = new HashMap<>();
+    private final Map<TextField, Feature> map = new HashMap<>();
+    private final NumberFormat format = new DecimalFormat("#0.00");
 
     public PricePane(FeatureModel fm) {
-        featureModel = fm;
 
         int row = 0;
-        for (Feature feature: featureModel.getFeatures(FeatureModel.FEATURE_ORDER.BF)) {
+        for (Feature feature: fm.getFeatures(FeatureModel.FEATURE_ORDER.BF)) {
             row = row + 1;
 
             Label label = new Label(feature.getName());
 
-            String price = format(feature.getPrice());
+            String price = format.format(feature.getPrice());
 
             TextField textField = new TextField(price);
 
@@ -42,13 +42,13 @@ public class PricePane extends GridPane {
             textField.focusedProperty().addListener((arg0, oldValue, newValue) -> {
                 if (!newValue) { //when focus lost
                     if(!textField.getText().matches("\\d{0,7}([\\.]\\d{0,4})?")){
-                        textField.setText(format(0.0));
+                        textField.setText(format.format(0.0));
                     } else {
                         Double newPrice = Double.parseDouble(textField.getText());
 
                         map.get(textField).setPrice(newPrice);
 
-                        textField.setText(format(newPrice));
+                        textField.setText(format.format(newPrice));
                     }
                 }
 
@@ -64,22 +64,16 @@ public class PricePane extends GridPane {
 
     public void savePrice() {
         map.forEach((textField,feature) -> {
-            Double newPrice = 0.0;
+            double newPrice = 0.0;
             if (!textField.getText().isEmpty()) {
                 try {
-                    newPrice = Double.parseDouble(textField.getText());
-                } catch (NumberFormatException e) {
+                    newPrice = format.parse(textField.getText()).doubleValue();
+                } catch (NumberFormatException | ParseException e) {
                     newPrice = 0.0;
                 }
             }
 
             feature.setPrice(newPrice);
         });
-    }
-
-    private String format(Double value) {
-        NumberFormat format = new DecimalFormat("#0.00");
-        String formatted = format.format(value);
-        return formatted;
     }
 }
